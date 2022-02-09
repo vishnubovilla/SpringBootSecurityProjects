@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+</head>
+<body>
+	<h3>Admin Page</h3>
+	<p>This is accessible to only Administrators</p>
+	<div sec:authorize="isAuthenticated()">
+		<a href="#" th:href="@{/logout}">LOGOUT</a>
+	</div>
+</body>
+</html>

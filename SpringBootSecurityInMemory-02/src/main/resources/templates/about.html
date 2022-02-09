@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>About Us</title>
+</head>
+<body>
+	<h3>About Us</h3>
+	<p>This page is accessible to all users.</p>
+
+	<div sec:authorize="isAuthenticated()">
+		<a href="#" th:href="@{/logout}">LOGOUT</a>
+	</div>
+	<div sec:authorize="isAnonymous()">
+		<a href="#" th:href="@{/login}">LOGIN</a>
+	</div>
+
+</body>
+</html>
